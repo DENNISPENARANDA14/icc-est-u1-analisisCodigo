@@ -97,7 +97,6 @@ public class App {
         "Resultado selección Metodo 3: " +
         java.util.Arrays.toString(arregloInsercionOrdenado3));
 
-
         Benchmarking benchmarking = new Benchmarking();
         
 

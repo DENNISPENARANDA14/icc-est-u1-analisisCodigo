@@ -12,7 +12,7 @@ public class Benchmarking {
 
         MetodosOrdenamiento =new MetodosOrdenamiento();
 
-        int [] arreglo= generarArregloAleatorio(1000000);
+        int [] arreglo= generarArregloAleatorio(1000);
         Runnable tarea = ()-> MetodosOrdenamiento.burbujaTradicional(arreglo);
         double tiempoDuracionMilis= medirConCurrerntTimeMiles(tarea);
         double tiempoDuracionNano= medirNanoTieme(tarea);
