@@ -4,7 +4,9 @@ import random
 import time
 #declaracion de la clase
 class benchmarking:
+    
     def __init__(self): #metodo constructor
+        """
         print("Benchmarking Instanciado")
         self.mO =MetodosOrdenamiento()
 
@@ -28,8 +30,14 @@ class benchmarking:
         tiempoN=self.contar_con_nano_times(tarea2)
         #print(f"tiempo en milisegundos: {tiempoM}")
         print(f"tiempo en nanosegundos: {tiempoN}")
-
         
+        """
+        
+    def medir_tiempo(self, funcion, array):
+        inicio= time.perf_counter()
+        funcion(array)
+        fin= time.perf_counter()
+        return fin -inicio
     
     def buil_arreglo(self, tamaño):
         arreglo=[]

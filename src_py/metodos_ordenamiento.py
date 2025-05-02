@@ -43,3 +43,21 @@ class MetodosOrdenamiento:
                 arreglo[i] = arreglo[im]
                 arreglo[im] = aux
         return arreglo
+    
+    
+    def shell_sort(self,lista):
+        n = len(lista)
+        intervalo = n // 2  # Se inicia con un intervalo grande (la mitad de la longitud)
+        while intervalo > 0:
+        # Ordenamiento por inserción con el intervalo actual
+            for i in range(intervalo, n):
+                temp = lista[i]
+                j = i
+                while j >= intervalo and lista[j - intervalo] > temp:
+                    lista[j] = lista[j - intervalo]
+                    j -= intervalo
+                lista[j] = temp
+            # Reducir el intervalo
+            intervalo //= 2
+        return lista
+    
